@@ -1,3 +1,14 @@
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 81%);
+    --light-gray: hsl(210, 46%, 95%);
+    --dark-gray: hsla(0, 0%, 0%, 0.122);
+    --off-black: #111;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,22 +20,19 @@
 
 html,
 body {
+    padding: 0;
     margin: 0 auto;
     max-width: 1440px;
     font-size: 13px;
     font-family: barlow-semi-condensed;
-    background-color: #cfcfcf;
+    background-color: var(--light-gray);
 }
 
 .main {
     padding: 4rem 3rem;
-}
-
-.content {
-    padding: 2rem;
+    /* padding: 2rem; */
     text-align: center;
-    background-color: #ecf2f8;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    background-color: var(--light-gray);
 }
 
 .container {
@@ -37,42 +45,45 @@ body {
 }
 
 .box {
-    border: 1px solid #ffffff34;
+    border: 1px solid var(--gray);
     border-radius: 0.6rem;
-    color: #fff;
+    color: var(--white);
     padding: 2rem;
     text-align: left;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px var(--dark-gray);
 }
 
 .box1 {
-    background-color: #7541c8;
+    background-color: var(--violet);
     grid-column: 1/3;
     grid-row: 1;
+    background-image: url(bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 88% 0;
 }
 
 .box2 {
-    background-color: #48556a;
+    background-color: var(--dark-grayish-blue);
     grid-column: 3;
     grid-row: 1;
 }
 
 .box3 {
-    background-color: #ffffff;
+    background-color: var(--white);
     grid-column: 4;
     grid-row: 1/3;
-    color: #111;
+    color: var(--off-black);
 }
 
 .box4 {
-    background-color: #ffffff;
+    background-color: var(--white);
     grid-column: 1;
     grid-row: 2;
-    color: #111;
+    color: var(--off-black);
 }
 
 .box5 {
-    background-color: #19212e;
+    background-color: var(--dark-blue);
     grid-column: 2/4;
     grid-row: 2;
 }
@@ -97,7 +108,7 @@ body {
 }
 
 .pic img {
-    border: 1px solid #7541c8;
+    border: 1px solid var(--violet);
     border-radius: 100%;
 }
 
@@ -110,7 +121,7 @@ body {
     font-weight: 500;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1023px) {
     .body {
         width: 100%;
         height: 100vh;
